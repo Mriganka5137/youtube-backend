@@ -5,10 +5,9 @@ import { app } from "./app.js";
 const port: number = parseInt(process.env.PORT!) || 5138;
 connectToDatabase()
   .then(() => {
-    app.listen(port),
-      () => {
-        console.log(`Listening on port: ${port}`);
-      };
+    app.listen(port, () => {
+      console.log(`⚙️ Server is running at port: ${port}`);
+    });
   })
   .catch((err) => {
     console.log(err);
